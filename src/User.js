@@ -31,7 +31,7 @@ export default function User() {
     },
   ]);
 
-  const changeStatus = (id) => {
+  const changeSgitatus = (id) => {
     const user = find(userList, (u) => u.id === id);
     user.status = user.status === "Active" ? "Inactive" : "Active";
     setuserList([...userList]);
@@ -55,7 +55,7 @@ export default function User() {
           />
         </div>
       ))}
-      <h1>Active Users</h1>
+      <h1>Active User(s)</h1>
       {userList
         .filter((u) => u.status === "Active")
         .map((u) => (
