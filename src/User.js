@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { forEach, find } from "lodash";
 import UserProfile from "./UserProfile";
 
@@ -36,6 +36,9 @@ export default function User() {
     user.status = user.status === "Active" ? "Inactive" : "Active";
     setuserList([...userList]);
   };
+  useEffect(() => {
+    console.log(userList);
+  }, []);
 
   return (
     <div>
